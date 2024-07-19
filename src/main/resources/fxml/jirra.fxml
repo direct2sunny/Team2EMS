@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.payrollmanagement.PayrollController">
+    <children>
+        <VBox alignment="CENTER" spacing="10" layoutX="20.0" layoutY="20.0">
+            <!-- Header -->
+            <HBox alignment="CENTER" styleClass="header">
+                <Label text="Payroll Management System" styleClass="header-label" />
+            </HBox>
+
+            <!-- Employee Details Section -->
+            <VBox spacing="10" styleClass="section">
+                <Label text="Employee Details" styleClass="section-title" />
+                <HBox spacing="10">
+                    <Label text="Employee ID:" />
+                    <TextField fx:id="employeeIdField" promptText="Employee ID" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="Name:" />
+                    <TextField fx:id="nameField" promptText="Name" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="Department:" />
+                    <TextField fx:id="departmentField" promptText="Department" />
+                </HBox>
+            </VBox>
+
+            <!-- Salary Information Section -->
+            <VBox spacing="10" styleClass="section">
+                <Label text="Salary Information" styleClass="section-title" />
+                <HBox spacing="10">
+                    <Label text="Basic Salary:" />
+                    <TextField fx:id="basicSalaryField" promptText="Basic Salary" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="Allowances:" />
+                    <TextField fx:id="allowancesField" promptText="Allowances" />
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="Deductions:" />
+                    <TextField fx:id="deductionsField" promptText="Deductions" />
+                </HBox>
+            </VBox>
+
+            <!-- Action Buttons -->
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Calculate Salary" onAction="#handleCalculateSalary" styleClass="button">
+                    <FontAwesomeIconView glyphName="CALCULATOR" />
+                </Button>
+                <Button text="Clear" onAction="#handleClear" styleClass="button">
+                    <FontAwesomeIconView glyphName="ERASER" />
+                </Button>
+                <Button text="Exit" onAction="#handleExit" styleClass="button">
+                    <FontAwesomeIconView glyphName="SIGN_OUT" />
+                </Button>
+            </HBox>
+
+            <!-- Payroll Table -->
+            <TableView fx:id="payrollTable" prefHeight="200">
+                <columns>
+                    <TableColumn text="Employee ID" fx:id="colEmployeeId">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="employeeId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Name" fx:id="colName">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Department" fx:id="colDepartment">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="department" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Basic Salary" fx:id="colBasicSalary">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="basicSalary" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Allowances" fx:id="colAllowances">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="allowances" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Deductions" fx:id="colDeductions">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="deductions" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Net Salary" fx:id="colNetSalary">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="netSalary" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>
