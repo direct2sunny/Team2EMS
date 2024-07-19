@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="838.0" prefWidth="1273.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.employeemanagement.WelcomePageController">
+   <children>
+      <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e9dee6;">
+         <children>
+            <AnchorPane prefHeight="831.0" prefWidth="1279.0" stylesheets="@dashboardDesign.css">
+               <children>
+                  <Label layoutX="461.0" layoutY="39.0" text="Welcome to Employee Dashboard Page">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="831.0" prefWidth="267.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+                     <children>
+                        <Button fx:id="leaveBtn" contentDisplay="GRAPHIC_ONLY" layoutX="13.0" layoutY="564.0" mnemonicParsing="false" onAction="#logout" prefHeight="80.0" prefWidth="241.0" style="-fx-background-color: transparent;" text="Events" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Events" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Leave Management" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventsBtn" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="246.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Leave Requests" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Events" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logoutBtn" layoutX="77.0" layoutY="770.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: BLACK;" text="LOGOUT" textFill="WHITE" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="59.0" layoutY="129.0" size="9.5em" styleClass="nav-form" text="" />
+                        <Button fx:id="leaveBtn1" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="296.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Leave Requests" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Shift Swap" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="leaveBtn11" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="346.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Leave Requests" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Schedule" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="leaveBtn111" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="395.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Leave Requests" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Pay Stubs" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="leaveBtn1111" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="444.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+                           <tooltip>
+                              <Tooltip text="Leave Requests" />
+                           </tooltip>
+                           <graphic>
+                              <Label text="Notification" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        
+                       
+   <Button fx:id="btnViewBenefits" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleViewBenefits" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+   <tooltip>
+      <Tooltip text="View Benefits" />
+   </tooltip>
+   <graphic>
+      <Label text="Benefits" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </graphic>
+</Button>
+
+<Button fx:id="btnViewHiring" contentDisplay="GRAPHIC_ONLY" layoutX="18.0" layoutY="542.0" mnemonicParsing="false" onAction="#handleViewHiring" prefHeight="27.0" prefWidth="231.0" style="-fx-background-color: transparent;" textFill="#ffffff00">
+   <tooltip>
+      <Tooltip text="View Hiring" />
+   </tooltip>
+   <graphic>
+      <Label text="Hiring" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </graphic>
+</Button>
+
+
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

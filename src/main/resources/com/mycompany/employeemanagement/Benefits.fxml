@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.employeemanagement.BenefitsController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="white-bg shadow" stylesheets="@dashboardDesign.css">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="14.0" prefHeight="303.0" prefWidth="792.0" styleClass="white-bg shadow">
+               <children>
+                  <TableView fx:id="benefitsTableView" layoutX="10.0" layoutY="62.0" prefHeight="227.0" prefWidth="772.0">
+                     <columns>
+                        <TableColumn fx:id="tcBenefitId" minWidth="55.0" prefWidth="55.0" text="ID" />
+                        <TableColumn fx:id="tcBenefitType" minWidth="132.0" prefWidth="132.0" text="Employee Type" />
+                        <TableColumn fx:id="tcBenefitName" minWidth="23.0" prefWidth="100.0" text="Benefit Name" />
+                        <TableColumn fx:id="tcBenefitDesc" minWidth="0.0" prefWidth="366.0" text="Benefit Description" />
+                        <TableColumn fx:id="tcBenefitDate" minWidth="121.0" prefWidth="121.0" text="Benefit Date" />
+                        <TableColumn fx:id="tcBenefitAmount" minWidth="176.0" prefWidth="282.0" text="Benefit Amount" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <GridPane fx:id="benefitDialog" hgap="10" layoutX="10.0" layoutY="330.0" prefWidth="772.0" vgap="10" visible="false">
+               <children>
+                  <Label text="Employee Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <ComboBox fx:id="benefitTypeField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label text="Benefit Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <TextField fx:id="benefitNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Benefit Description:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <TextField fx:id="benefitDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Benefit Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="benefitDateField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Benefit Amount:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                  <TextField fx:id="benefitAmountField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <children>
+                        <Button fx:id="okBtn" mnemonicParsing="false" onAction="#handleOk" text="OK" />
+                        <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+            <HBox layoutX="10.0" layoutY="550.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#handleAddBenefit" text="Add" />
+                  <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#handleUpdateBenefit" text="Update" />
+                  <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#handleDeleteBenefit" text="Delete" />
+                  <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#handleClearFields" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

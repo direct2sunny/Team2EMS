@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.employeemanagement.AdminHiringController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@dashboardDesign.css">
+            <children>
+                <TableView fx:id="hiringPostTableView" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleJobPostSelect" prefHeight="200.0" prefWidth="772.0">
+                    <columns>
+                        <TableColumn fx:id="tcHiringPostId" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="tcTitle" prefWidth="200.0" text="Job Title" />
+                        <TableColumn fx:id="tcDescription" prefWidth="300.0" text="Job Description" />
+                        <TableColumn fx:id="tcCreatedAt" prefWidth="196.0" text="Posted Date" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="titleField" layoutX="10.0" layoutY="220.0" promptText="Job Title" />
+                <TextField fx:id="descriptionField" layoutX="10.0" layoutY="260.0" promptText="Job Description" />
+                <Button fx:id="addBtn" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleAdd" text="Add" />
+                <Button fx:id="updateBtn" layoutX="70.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update" />
+                <Button fx:id="deleteBtn" layoutX="140.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+                <TableView fx:id="userApplicationsTableView" layoutX="10.0" layoutY="350.0" prefHeight="200.0" prefWidth="772.0">
+                    <columns>
+                        <TableColumn fx:id="tcUserId" prefWidth="75.0" text="User ID" />
+                        <TableColumn fx:id="tcUserName" prefWidth="332.0" text="User Name" />
+                        <TableColumn fx:id="tcApplicationStatus" prefWidth="364.0" text="Application Status" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
